@@ -12,6 +12,7 @@
     }
 </style>
 <body>
+{% include 'nav.html' %}
     <div class="container">
         <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
         <img id="banner" class="img-fluid"  src="{{url_for('static', filename='brendan-church-pKeF6Tt3c08-unsplash.jpg')}}">
@@ -32,10 +33,9 @@
         </div>
 
         <div class="text-center">
-            <button class="btn btn-primary btn-large">Contact Us</button>
-            <p class="mt-4">Some coopy right</p>
+            <a href="mailto:paatagvichia@gmail.com?subject=CountactUs" class="btn btn-primary btn-large">Contact Us</a>
         </div>
-
+    {% include 'footer.html' %}
     </div>
 
 
