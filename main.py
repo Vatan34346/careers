@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     jobs_ = load_jobs()
+    print(jobs_)
     return render_template('home.html', jobs=jobs_, company_name='Paata')
 
 

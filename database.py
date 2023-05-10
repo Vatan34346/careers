@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, text
 
 load_dotenv()
 
-
+print(os.getenv('CONNECTION_STRING'))
 engine = create_engine(os.getenv('CONNECTION_STRING'),
                        connect_args={
                            "ssl": {
@@ -20,6 +20,7 @@ def load_jobs():
         result = conn.execute(text("select * from jobs"))
         columns = result.keys()
         jobs_ = [dict(zip(columns, row)) for row in result.all()]
+        print(jobs_)
         return jobs_
 
 
